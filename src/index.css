@@ -1,0 +1,352 @@
+.formdesign{
+            background-color: #e5e5e5;
+            margin-top: 200px;
+            width: 40%;
+            margin-right: 30%;
+            margin-left: 30%;
+            border-radius: 5px;
+}
+.miniformdesign{
+                height: 300px;
+                padding: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+}
+.registerbtn{
+            background:#2e5984!important;
+            border: none;
+            width: 100%;
+            height: 55px;
+}
+.updatebtn{
+              background: #097969!important;
+              border: none;
+              width: 100%;
+              height: 55px;
+}
+.deletebtn{
+              background: #A52A2A!important;
+              border: none;
+              width: 100%;
+              height: 55px;
+}
+.martop{
+              margin-top: 20px!important;
+              padding: 20px;
+}
+.inputdesign{
+              height: 60px;
+}
+.formgroupdesign{
+                  padding: 20px;
+}
+/* ----- Expense category list ----- */
+.expensecatlistmaindiv{
+                       background-color: "#fff";
+                       width: 100%;
+                       padding: 30px;
+}
+/* ----- Expense category component ------ */
+.expensecatregmaindiv{
+                      background-color: #fff;
+                      width: 96%;
+                      position: relative;
+                      top: 3%;
+                      bottom: 2%;
+                      right: 2%;
+                      left: 2%;
+}
+.catregisterform{
+                 padding: 15px;
+                 width: 100%;
+      
+}
+.designcol{
+           padding: 0%;
+           
+           width: 100%;
+}
+Table{
+      background-color: #fff;
+}
+.itemName{
+          margin-top: 5px;            
+}
+.btnnn{
+       height: 40px;
+}
+/* ------ login component ------ */
+.loginform{
+             background-color: #efefef;
+             padding: 30px;
+             width: 30%;
+             margin-left: 35%;
+             margin-top: 10%;
+             border-radius: 5px;
+}
+.loginform .logininputdesign{
+                              height: 50px;
+                              padding: 5px;
+}
+.loginbtn{
+      background: #2e5984!important;
+      border: none;
+      width: 100%;
+      height: 45px;
+      margin-top: 10px;
+}
+/* -------- Employee Register component ----- */
+.employeeregmaindiv{
+                     background-color: #fff;
+                     width: 96%;
+                     position: relative;
+                     top: 3%;
+                     bottom: 2%;
+                     right: 2%;
+                     left: 2%;
+                     
+}
+.heading-title{
+               font-size: 16px;
+                margin-left: 30px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+}
+.registerform{
+               padding: 15px;
+               
+}
+.registerform .registerinputdesign{
+                                   height: 50px;
+                                   padding: 5px;
+}
+
+.marregtop{
+            padding-top: 20px;
+            padding-bottom: 25px;
+}
+/* -------- Employee Register component ----- */
+.employeelistmaindiv{
+                     background-color: "#fff";
+                     width: 100%;
+                     padding: 30px;
+}
+.listinputdesign{
+                 height: 50px;
+                 padding: 5px;
+}
+.tablerow{
+          padding-top: 50px;
+}
+.searchbtn{
+         background: #097969!important;
+         border: none;
+         width: 100%;
+         height: 40px;
+}
+.clearbtn{
+          background: #A52A2A!important;
+          border: none!important;
+          width: 100%;
+          height: 40px;
+}
+.commonbtn{
+          background-color: #2e5984!important;
+          width: 100%;
+          border: none!important;
+}
+.deletebtn{
+         background: #A52A2A!important;
+         border: none!important;
+         width: 100%;
+        
+}
+.tablerowdesign{
+                width: 13%;
+}
+.tabletopdesign{
+                 width: 9%;
+}
+/* ------ css of  dashboard part --------- */
+.home{
+        display: flex;
+}
+.homeContainer{
+               flex: 6;
+}
+.sidebar{
+         flex: 1;
+         border-right: 0.5px solid rgb(230, 227, 227);
+         min-height: 100vh;
+         background-color: white;
+}
+.top{
+      height: 33px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+}
+.logo{
+       font-size: 20px;
+       font-weight: bold;
+       color: #000;
+}
+.center{
+        padding-left: 0px;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+   display:flex;
+   align-items: center;
+   padding: 5px;
+   cursor: pointer;
+}
+li:hover{
+         color: rebeccapurple!important;
+}
+.title{
+        font-size: 12px;
+        font-weight: bold;
+        color: #000;
+        margin-top: 15px;
+        margin-bottom: 5px;
+}
+.icon{
+       font-size: 18px;
+       color: #999;
+}
+span{
+      font-size: 14px;
+      font-weight: 600;
+      color: #999;
+      margin-left: 20px;
+      text-decoration: none!important;
+
+}
+span:hover{
+            color: rebeccapurple;
+}
+.navbar{
+         height: 50px;
+         border-bottom: 0.5px solid rgb(231, 228, 228);
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         color: #555;
+}
+.wrapper{
+         padding: 5px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+}
+.search{
+         display: flex;
+         align-items: center;
+         border: 0.5px solid lightgray;
+         padding: 3px;
+}
+
+.items{
+        display: flex;
+        align-items: center;
+}
+.item{
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      position: relative;
+}
+.icon{
+      font-size: 20px;
+}
+.counter{
+         width: 15px;
+         height: 15px;
+         background-color: red;
+         border-radius: 50%;
+         color: white;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 10px;
+         font-weight: bold;
+         position: absolute;
+         top: 0;
+         right: 0;
+}
+.bodydesign{
+             background-color: #f4f6f9;
+             height: 96vh;
+             margin: 0%;
+}
+/* ---- Table design ----- */
+table{
+      width: 100%;
+      height: 200px;
+      border-collapse: collapse;
+      border: 1px solid #a4a4a4!important;
+}
+th{
+   padding: 10px;
+   font-size: 16px;
+   border: 1px solid #a4a4a4!important;
+   background-color: #EDF2F7;
+   text-align: center!important;
+}
+td{
+    text-align: center;
+    border: 1px solid #a4a4a4!important;
+    padding: 5px;
+}
+.tddesign{
+       width: 7%;
+}
+.linkdesign{
+       text-decoration: none!important;
+}
+/* ===== home ====  */
+.homeheading{
+       text-align: center;
+       padding-top: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
