@@ -43,6 +43,7 @@ const ExpenseRegistration = () => {
       alert('Registered Successfully!');
     } catch {
       alert('Error while Registering!');
+      console.log(Expense);
     }
   };
 
@@ -50,7 +51,7 @@ const ExpenseRegistration = () => {
     <div className='container'>
       <div className='row'>
         <div className='register mt-5 m-auto'>
-          <h3 className='mb-4'>Expense Register</h3>
+          <h3 className='mb-4 text-center'>Expense Register</h3>
           <form onSubmit={(e) => onSubmit(e)}>
             <table cellPadding='20px' className='first'>
               <tbody>

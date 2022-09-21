@@ -57,10 +57,11 @@ const ExpenseList = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.get(`${base_url}/api/expense-list/search/${id}`, expenseList);
+      await axios.post(`${base_url}/api/expense-list/register`, expenseList);
       navigate('/expense-list');
+      alert('Registered Successfully!');
     } catch {
-      alert('Error while Searching...Try Again Later!');
+      alert('Error while Registering...Try Again Later!');
     }
   };
 
@@ -186,9 +187,12 @@ const ExpenseList = () => {
         </Row>
         <Row className='ms-auto'>
           <Col className='d-flex justify-content-end gap-2'>
-            <Button variant='success' type='submit'>
-              Search
+            <Button variant='primary' type='submit'>
+              Add Data
             </Button>
+            <Link to='/expense-list-data' className='btn btn-success'>
+              Search
+            </Link>
             <Link to='/expense-list-data' className='btn btn-primary'>
               Show Data
             </Link>
