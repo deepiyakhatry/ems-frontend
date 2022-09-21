@@ -46,14 +46,15 @@ const EditExpenseList = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`${base_url}/api/expense-list/update/${id}`);
+      await axios.put(`${base_url}/api/expense-list/search/${id}`, ExpenseList);
       navigate('/expense-list');
+      alert('Update Successful!');
     } catch {
-      alert('Error!');
+      alert('Error Occured while Updating...Try Again Later!');
     }
   };
 
-  const loadExpenseList = async () => {
+  const loadExpenseList = async (e) => {
     const ExpenseListResult = await axios.get(
       `${base_url}/api/expense-list/search/${id}`
     );

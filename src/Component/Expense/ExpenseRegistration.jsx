@@ -8,9 +8,9 @@ const ExpenseRegistration = () => {
   let navigate = useNavigate();
 
   const [Expense, setExpense] = useState({
-    dept_name: '',
-    division: '',
-    account: '',
+    dept_name: '1',
+    division: '1',
+    account: 'primary',
     summary: '',
     payment_status: '',
     arrival_station: '',
@@ -36,8 +36,10 @@ const ExpenseRegistration = () => {
   };
 
   const onSubmit = async (e) => {
+    e.preventDefault();
     try {
       await axios.post(`${base_url}/api/expense/register`, Expense);
+      navigate('/expense-list');
       alert('Registered Successfully!');
     } catch {
       alert('Error while Registering!');
@@ -63,9 +65,6 @@ const ExpenseRegistration = () => {
                       value={dept_name}
                       aria-label='Default select example'
                     >
-                      <option selected value='1'>
-                        Select dept_name
-                      </option>
                       <option value='1'>One</option>
                       <option value='2'>Two</option>
                       <option value='3'>Three</option>
@@ -83,9 +82,6 @@ const ExpenseRegistration = () => {
                       value={division}
                       aria-label='Default select example'
                     >
-                      <option selected value='1'>
-                        Select Division
-                      </option>
                       <option value='1'>First</option>
                       <option value='2'>Second</option>
                       <option value='3'>Third</option>
@@ -103,9 +99,6 @@ const ExpenseRegistration = () => {
                       value={account}
                       aria-label='Default select example'
                     >
-                      <option selected value='primary'>
-                        Select Account
-                      </option>
                       <option value='primary'>Primary</option>
                       <option value='secondary'>Secondary</option>
                     </select>
@@ -205,7 +198,7 @@ const ExpenseRegistration = () => {
                     </td>
 
                     <td>
-                      <Link to='/' className='btn btn-danger'>
+                      <Link to='/expense-list' className='btn btn-danger'>
                         削除
                       </Link>
                     </td>

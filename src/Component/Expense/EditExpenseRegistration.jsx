@@ -47,15 +47,20 @@ const EditExpenseRegistration = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(
-      `http://localhost:8080/api/expense/update/${id}`,
-      ExpenseRegistration
-    );
-    navigate('/expense-list');
+    try {
+      await axios.put(
+        `${base_url}/api/expense/search/${id}`,
+        ExpenseRegistration
+      );
+      navigate('/expense-list');
+      alert('Update Successful!');
+    } catch {
+      alert('Error while Updating...Try Again Later!');
+    }
   };
 
   const loadExpenseRegistration = async () => {
-    const result = await axios.get(`${base_url}/api/expense-list/search/${id}`);
+    const result = await axios.get(`${base_url}/api/expense/search/${id}`);
     setExpenseRegistration(result.data);
   };
 

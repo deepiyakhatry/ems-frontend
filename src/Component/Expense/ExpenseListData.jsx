@@ -16,13 +16,14 @@ const ExpenseListData = () => {
   }, []);
 
   const loadExpenseList = async () => {
-    const result = await axios.get(`${base_url}/api/expense/search`);
+    const result = await axios.get(`${base_url}/api/expense-list/search`);
     setExpenseList(result.data);
   };
 
   const deleteExpenseList = async (id) => {
-    await axios.delete(`${base_url}/api/expense/search/${id}`);
+    await axios.delete(`${base_url}/api/expense-list/search/${id}`);
     loadExpenseList();
+    alert('Successfully Deleted!');
   };
 
   return (
@@ -68,8 +69,9 @@ const ExpenseListData = () => {
                     Edit
                   </Link>
                   <button
-                    className='btn btn-outline-danger mx-2'
+                    type='button'
                     onClick={() => deleteExpenseList(ExpenseList.id)}
+                    className='btn btn-outline-danger mx-2'
                   >
                     Delete
                   </button>

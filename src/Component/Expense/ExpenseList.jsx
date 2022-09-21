@@ -8,6 +8,9 @@ import base_url from '../../api/bootapi';
 
 const ExpenseList = () => {
   const [expenseRegister, setExpenseRegister] = useState([]);
+
+  const { id } = useParams();
+
   useEffect(() => {
     loadExpenseRegister();
   }, []);
@@ -17,10 +20,11 @@ const ExpenseList = () => {
     setExpenseRegister(result.data);
   };
 
-  // const deleteUser = async (id) => {
-  //   await axios.delete(`http://localhost:8080/expense-register/${id}`);
-  //   loadExpenseRegister();
-  // };
+  const deleteExpenseRegister = async (id) => {
+    await axios.delete(`${base_url}/api/expense/search/${id}`);
+    loadExpenseRegister();
+    alert('Successfully Deleted!');
+  };
 
   let navigate = useNavigate();
   const [expenseList, setExpenseList] = useState({
@@ -51,9 +55,13 @@ const ExpenseList = () => {
   };
 
   const onSubmit = async (e) => {
-    await axios.post('http://localhost:8080/expense-list', expenseList);
-    navigate('/expense-list');
-    console.log(expenseList);
+    e.preventDefault();
+    try {
+      await axios.get(`${base_url}/api/expense-list/search/${id}`, expenseList);
+      navigate('/expense-list');
+    } catch {
+      alert('Error while Searching...Try Again Later!');
+    }
   };
 
   return (
@@ -226,7 +234,11 @@ const ExpenseList = () => {
                   >
                     Edit
                   </Link>
-                  <button className='btn btn-outline-danger mx-2'>
+                  <button
+                    type='button'
+                    onClick={() => deleteExpenseRegister(expense.id)}
+                    className='btn btn-outline-danger mx-2'
+                  >
                     Delete
                   </button>
                 </td>

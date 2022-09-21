@@ -2,7 +2,13 @@ import React from 'react';
 import Sidebar from '../src/Component/sidebar/sidebar.component';
 import ExpenseList from './Component/Expense/ExpenseList';
 import Navbar from './Component/navbar/Navbar.component';
-import { BrowserRouter, Routes, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Switch,
+  Route,
+  useParams,
+} from 'react-router-dom';
 import ExpenseRegistration from './Component/Expense/ExpenseRegistration';
 import EditExpenseRegistration from './Component/Expense/EditExpenseRegistration';
 import ExpenseListData from './Component/Expense/ExpenseListData';
@@ -28,9 +34,6 @@ const App = () => {
               path='/edit-expense-register/:id'
               element={<EditExpenseRegistration />}
             />
-
-            {/* <ExpenseRegistration /> */}
-            {/* <ExpenseListData /> */}
           </Routes>
         </div>
       </div>
